@@ -8,33 +8,57 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Mental Health Theme - Calming Colors */
+    --background: 220 15% 97%;
+    --foreground: 215 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Calming Teal */
+    --primary: 185 75% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 185 45% 88%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Soft Purple */
+    --secondary: 260 20% 92%;
+    --secondary-foreground: 260 35% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted: Warm Gray */
+    --muted: 210 15% 94%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent: Gentle Green */
+    --accent: 145 30% 88%;
+    --accent-foreground: 145 40% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 215 20% 88%;
+    --input: 215 20% 95%;
+    --ring: 185 75% 35%;
+
+    /* Custom Mental Health Variables */
+    --therapy-blue: 200 60% 45%;
+    --calm-green: 145 40% 50%;
+    --warm-beige: 35 25% 92%;
+    --trust-navy: 215 35% 25%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(185 75% 35%), hsl(200 60% 45%));
+    --gradient-chat: linear-gradient(180deg, hsl(220 15% 97%), hsl(215 20% 95%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 15% 98%));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(215 25% 15% / 0.08);
+    --shadow-chat: 0 8px 25px -5px hsl(185 75% 35% / 0.15);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
 
@@ -56,33 +80,54 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark Mental Health Theme */
+    --background: 215 25% 8%;
+    --foreground: 215 15% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 215 25% 10%;
+    --card-foreground: 215 15% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 215 25% 10%;
+    --popover-foreground: 215 15% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Primary: Bright Teal for dark mode */
+    --primary: 185 65% 55%;
+    --primary-foreground: 215 25% 8%;
+    --primary-soft: 185 35% 20%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    /* Secondary: Muted Purple */
+    --secondary: 260 15% 18%;
+    --secondary-foreground: 260 25% 85%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    /* Muted: Dark Gray */
+    --muted: 215 20% 15%;
+    --muted-foreground: 215 10% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    /* Accent: Soft Green for dark */
+    --accent: 145 25% 20%;
+    --accent-foreground: 145 30% 85%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 215 15% 92%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 215 20% 18%;
+    --input: 215 20% 15%;
+    --ring: 185 65% 55%;
+
+    /* Dark Custom Variables */
+    --therapy-blue: 200 55% 60%;
+    --calm-green: 145 40% 60%;
+    --warm-beige: 35 15% 15%;
+    --trust-navy: 215 25% 85%;
+
+    /* Dark Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(185 65% 25%), hsl(200 55% 30%));
+    --gradient-chat: linear-gradient(180deg, hsl(215 25% 8%), hsl(215 20% 12%));
+    --gradient-card: linear-gradient(145deg, hsl(215 25% 10%), hsl(215 20% 12%));
+
+    /* Dark Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
+    --shadow-chat: 0 8px 25px -5px hsl(185 65% 15% / 0.4);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
