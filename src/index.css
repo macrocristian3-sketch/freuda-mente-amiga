@@ -79,55 +79,55 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .dark {
-    /* Even Darker Mental Health Theme */
-    --background: 215 25% 6%;
-    --foreground: 215 15% 90%;
+  .light {
+    /* Light Mental Health Theme - Alternative */
+    --background: 220 15% 98%;
+    --foreground: 215 25% 15%;
 
-    --card: 215 25% 8%;
-    --card-foreground: 215 15% 90%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
 
-    --popover: 215 25% 8%;
-    --popover-foreground: 215 15% 90%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
 
-    /* Primary: Softer Teal for very dark mode */
-    --primary: 185 55% 50%;
-    --primary-foreground: 215 25% 6%;
-    --primary-soft: 185 25% 18%;
+    /* Primary: Deeper Teal for light mode */
+    --primary: 185 70% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 185 40% 90%;
 
-    /* Secondary: Deeper Purple */
-    --secondary: 260 15% 15%;
-    --secondary-foreground: 260 20% 80%;
+    /* Secondary: Soft Purple */
+    --secondary: 260 20% 94%;
+    --secondary-foreground: 260 35% 25%;
 
-    /* Muted: Very Dark Gray */
-    --muted: 215 20% 12%;
-    --muted-foreground: 215 10% 55%;
+    /* Muted: Light Gray */
+    --muted: 210 15% 96%;
+    --muted-foreground: 215 15% 45%;
 
-    /* Accent: Darker Green */
-    --accent: 145 20% 18%;
-    --accent-foreground: 145 25% 75%;
+    /* Accent: Gentle Green */
+    --accent: 145 30% 90%;
+    --accent-foreground: 145 40% 25%;
 
-    --destructive: 0 65% 50%;
-    --destructive-foreground: 215 15% 90%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 215 20% 15%;
-    --input: 215 20% 12%;
-    --ring: 185 55% 50%;
+    --border: 215 20% 85%;
+    --input: 215 20% 93%;
+    --ring: 185 70% 40%;
 
-    /* Very Dark Custom Variables */
-    --therapy-blue: 200 45% 55%;
-    --calm-green: 145 35% 55%;
-    --warm-beige: 35 12% 12%;
-    --trust-navy: 215 20% 80%;
+    /* Light Custom Variables */
+    --therapy-blue: 200 60% 45%;
+    --calm-green: 145 40% 50%;
+    --warm-beige: 35 25% 94%;
+    --trust-navy: 215 35% 25%;
 
-    /* Very Dark Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(185 50% 20%), hsl(200 45% 25%));
-    --gradient-chat: linear-gradient(180deg, hsl(215 25% 6%), hsl(215 20% 8%));
-    --gradient-card: linear-gradient(145deg, hsl(215 25% 8%), hsl(215 20% 10%));
+    /* Light Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(185 70% 40%), hsl(200 60% 45%));
+    --gradient-chat: linear-gradient(180deg, hsl(220 15% 98%), hsl(215 20% 96%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 15% 99%));
 
-    /* Enhanced Dark Shadows */
-    --shadow-soft: 0 4px 20px -2px hsl(0 0% 0% / 0.4);
-    --shadow-chat: 0 8px 25px -5px hsl(185 50% 10% / 0.5);
+    /* Light Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(215 25% 15% / 0.08);
+    --shadow-chat: 0 8px 25px -5px hsl(185 70% 40% / 0.15);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

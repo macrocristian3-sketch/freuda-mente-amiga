@@ -3,22 +3,21 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
-    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    const initialTheme = savedTheme || systemTheme;
+    const savedTheme = localStorage.getItem("theme") as "dark" | "light" | null;
+    const initialTheme = savedTheme || "dark"; // Default to dark
     
     setTheme(initialTheme);
-    document.documentElement.classList.toggle("dark", initialTheme === "dark");
+    document.documentElement.classList.toggle("light", initialTheme === "light");
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
+    const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
+    document.documentElement.classList.toggle("light", newTheme === "light");
   };
 
   return (
@@ -28,10 +27,10 @@ export function ThemeToggle() {
       onClick={toggleTheme}
       className="border-border/50 hover:bg-accent/50 transition-colors"
     >
-      {theme === "light" ? (
-        <Moon className="h-4 w-4" />
-      ) : (
+      {theme === "dark" ? (
         <Sun className="h-4 w-4" />
+      ) : (
+        <Moon className="h-4 w-4" />
       )}
       <span className="sr-only">Cambiar tema</span>
     </Button>
