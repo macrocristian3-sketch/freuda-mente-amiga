@@ -8,54 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Mental Health Theme - Calming Colors */
-    --background: 220 15% 97%;
-    --foreground: 215 25% 15%;
+    /* Mental Health Theme - Darker Calming Colors */
+    --background: 215 25% 12%;
+    --foreground: 215 15% 88%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card: 215 25% 15%;
+    --card-foreground: 215 15% 88%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover: 215 25% 15%;
+    --popover-foreground: 215 15% 88%;
 
-    /* Primary: Calming Teal */
-    --primary: 185 75% 35%;
-    --primary-foreground: 0 0% 100%;
-    --primary-soft: 185 45% 88%;
+    /* Primary: Soft Teal for dark theme */
+    --primary: 185 60% 45%;
+    --primary-foreground: 215 25% 12%;
+    --primary-soft: 185 30% 20%;
 
-    /* Secondary: Soft Purple */
-    --secondary: 260 20% 92%;
-    --secondary-foreground: 260 35% 25%;
+    /* Secondary: Muted Purple */
+    --secondary: 260 15% 22%;
+    --secondary-foreground: 260 20% 80%;
 
-    /* Muted: Warm Gray */
-    --muted: 210 15% 94%;
-    --muted-foreground: 215 15% 45%;
+    /* Muted: Dark Gray */
+    --muted: 215 20% 18%;
+    --muted-foreground: 215 10% 60%;
 
-    /* Accent: Gentle Green */
-    --accent: 145 30% 88%;
-    --accent-foreground: 145 40% 25%;
+    /* Accent: Gentle Green for dark */
+    --accent: 145 25% 22%;
+    --accent-foreground: 145 25% 75%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 215 15% 88%;
 
-    --border: 215 20% 88%;
-    --input: 215 20% 95%;
-    --ring: 185 75% 35%;
+    --border: 215 20% 25%;
+    --input: 215 20% 18%;
+    --ring: 185 60% 45%;
 
     /* Custom Mental Health Variables */
-    --therapy-blue: 200 60% 45%;
-    --calm-green: 145 40% 50%;
-    --warm-beige: 35 25% 92%;
-    --trust-navy: 215 35% 25%;
+    --therapy-blue: 200 50% 55%;
+    --calm-green: 145 35% 50%;
+    --warm-beige: 35 15% 18%;
+    --trust-navy: 215 20% 75%;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(185 75% 35%), hsl(200 60% 45%));
-    --gradient-chat: linear-gradient(180deg, hsl(220 15% 97%), hsl(215 20% 95%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 15% 98%));
+    /* Gradients - Darker */
+    --gradient-hero: linear-gradient(135deg, hsl(185 50% 25%), hsl(200 45% 30%));
+    --gradient-chat: linear-gradient(180deg, hsl(215 25% 12%), hsl(215 20% 14%));
+    --gradient-card: linear-gradient(145deg, hsl(215 25% 15%), hsl(215 20% 17%));
 
     /* Shadows */
-    --shadow-soft: 0 4px 20px -2px hsl(215 25% 15% / 0.08);
-    --shadow-chat: 0 8px 25px -5px hsl(185 75% 35% / 0.15);
+    --shadow-soft: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
+    --shadow-chat: 0 8px 25px -5px hsl(185 50% 15% / 0.4);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -80,54 +80,54 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Dark Mental Health Theme */
-    --background: 215 25% 8%;
-    --foreground: 215 15% 92%;
+    /* Even Darker Mental Health Theme */
+    --background: 215 25% 6%;
+    --foreground: 215 15% 90%;
 
-    --card: 215 25% 10%;
-    --card-foreground: 215 15% 92%;
+    --card: 215 25% 8%;
+    --card-foreground: 215 15% 90%;
 
-    --popover: 215 25% 10%;
-    --popover-foreground: 215 15% 92%;
+    --popover: 215 25% 8%;
+    --popover-foreground: 215 15% 90%;
 
-    /* Primary: Bright Teal for dark mode */
-    --primary: 185 65% 55%;
-    --primary-foreground: 215 25% 8%;
-    --primary-soft: 185 35% 20%;
+    /* Primary: Softer Teal for very dark mode */
+    --primary: 185 55% 50%;
+    --primary-foreground: 215 25% 6%;
+    --primary-soft: 185 25% 18%;
 
-    /* Secondary: Muted Purple */
-    --secondary: 260 15% 18%;
-    --secondary-foreground: 260 25% 85%;
+    /* Secondary: Deeper Purple */
+    --secondary: 260 15% 15%;
+    --secondary-foreground: 260 20% 80%;
 
-    /* Muted: Dark Gray */
-    --muted: 215 20% 15%;
-    --muted-foreground: 215 10% 65%;
+    /* Muted: Very Dark Gray */
+    --muted: 215 20% 12%;
+    --muted-foreground: 215 10% 55%;
 
-    /* Accent: Soft Green for dark */
-    --accent: 145 25% 20%;
-    --accent-foreground: 145 30% 85%;
+    /* Accent: Darker Green */
+    --accent: 145 20% 18%;
+    --accent-foreground: 145 25% 75%;
 
-    --destructive: 0 75% 55%;
-    --destructive-foreground: 215 15% 92%;
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 215 15% 90%;
 
-    --border: 215 20% 18%;
-    --input: 215 20% 15%;
-    --ring: 185 65% 55%;
+    --border: 215 20% 15%;
+    --input: 215 20% 12%;
+    --ring: 185 55% 50%;
 
-    /* Dark Custom Variables */
-    --therapy-blue: 200 55% 60%;
-    --calm-green: 145 40% 60%;
-    --warm-beige: 35 15% 15%;
-    --trust-navy: 215 25% 85%;
+    /* Very Dark Custom Variables */
+    --therapy-blue: 200 45% 55%;
+    --calm-green: 145 35% 55%;
+    --warm-beige: 35 12% 12%;
+    --trust-navy: 215 20% 80%;
 
-    /* Dark Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(185 65% 25%), hsl(200 55% 30%));
-    --gradient-chat: linear-gradient(180deg, hsl(215 25% 8%), hsl(215 20% 12%));
-    --gradient-card: linear-gradient(145deg, hsl(215 25% 10%), hsl(215 20% 12%));
+    /* Very Dark Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(185 50% 20%), hsl(200 45% 25%));
+    --gradient-chat: linear-gradient(180deg, hsl(215 25% 6%), hsl(215 20% 8%));
+    --gradient-card: linear-gradient(145deg, hsl(215 25% 8%), hsl(215 20% 10%));
 
-    /* Dark Shadows */
-    --shadow-soft: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
-    --shadow-chat: 0 8px 25px -5px hsl(185 65% 15% / 0.4);
+    /* Enhanced Dark Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(0 0% 0% / 0.4);
+    --shadow-chat: 0 8px 25px -5px hsl(185 50% 10% / 0.5);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
