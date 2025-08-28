@@ -37,17 +37,18 @@ const Index = () => {
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Freuda es tu compañera digital de apoyo emocional. Un lugar seguro donde puedes 
-              expresar tus sentimientos, explorar tus emociones y encontrar claridad en tus pensamientos.
+              Freuda es tu compañera digital de apoyo emocional con inteligencia artificial. 
+              Un lugar seguro donde puedes expresar tus sentimientos, explorar tus emociones 
+              y recibir apoyo personalizado las 24 horas del día.
             </p>
 
             {/* Features */}
             <div className="grid md:grid-cols-3 gap-6 mb-12 animate-slide-up">
               <div className="bg-gradient-card p-6 rounded-lg shadow-soft border border-border/50">
                 <MessageCircle className="h-8 w-8 text-primary mx-auto mb-3" />
-                <h3 className="font-semibold text-foreground mb-2">Conversación Empática</h3>
+                <h3 className="font-semibold text-foreground mb-2">IA Empática</h3>
                 <p className="text-sm text-muted-foreground">
-                  Comparte tus pensamientos en un ambiente libre de juicios
+                  Conversaciones inteligentes y empáticas adaptadas a tus necesidades emocionales
                 </p>
               </div>
               
@@ -74,10 +75,11 @@ const Index = () => {
         <section className="max-w-4xl mx-auto animate-slide-up">
           <div className="text-center mb-6">
             <h3 className="text-2xl font-semibold text-foreground mb-2">
-              Comienza tu conversación
+              Comienza tu conversación con IA
             </h3>
             <p className="text-muted-foreground">
-              Freuda está aquí para escucharte. No hay preguntas incorrectas ni sentimientos inválidos.
+              Freuda usa inteligencia artificial para brindarte apoyo personalizado. 
+              No hay preguntas incorrectas ni sentimientos inválidos.
             </p>
           </div>
           
@@ -86,8 +88,9 @@ const Index = () => {
           <div className="mt-6 p-4 bg-warm-beige/50 rounded-lg border border-border/30">
             <p className="text-sm text-muted-foreground text-center">
               <strong>Nota importante:</strong> Freuda es una herramienta de apoyo emocional y no reemplaza 
-              la atención de un profesional de la salud mental. Si experimentas pensamientos de autolesión 
-              o crisis emocionales graves, por favor busca ayuda profesional inmediata.
+              la atención de un profesional de la salud mental. Las respuestas son generadas por IA. 
+              Si experimentas pensamientos de autolesión o crisis emocionales graves, por favor busca 
+              ayuda profesional inmediata.
             </p>
           </div>
         </section>

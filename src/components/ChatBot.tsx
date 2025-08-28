@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { ChatMessage } from "./ChatMessage";
 import { useToast } from "@/hooks/use-toast";
+import { generateMentalHealthResponse } from "@/lib/llm";
 
 interface Message {
   id: string;
@@ -17,7 +18,7 @@ export function ChatBot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "welcome",
-      content: "¡Hola! Soy Freuda, tu compañera de apoyo emocional. Estoy aquí para escucharte y ayudarte a explorar tus sentimientos en un espacio seguro. ¿Cómo te sientes hoy?",
+      content: "¡Hola! Soy Freuda, tu compañera de apoyo emocional con inteligencia artificial. Estoy aquí para escucharte y ayudarte a explorar tus sentimientos en un espacio seguro y confidencial. Puedes hablarme sobre cualquier cosa que esté en tu mente. ¿Cómo te sientes hoy?",
       isBot: true,
       timestamp: new Date()
     }
@@ -27,29 +28,11 @@ export function ChatBot() {
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
 
-  // Auto scroll to bottom when new messages arrive
   useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
     }
   }, [messages]);
-
-  const generateResponse = async (userMessage: string): Promise<string> => {
-    // Simple mental health focused responses
-    const responses = [
-      "Entiendo cómo te sientes. Es completamente normal tener estas emociones. ¿Puedes contarme más sobre lo que está pasando en tu vida ahora?",
-      "Gracias por compartir eso conmigo. Tus sentimientos son válidos y es importante que los reconozcas. ¿Hay algo específico que te gustaría explorar más?",
-      "Es muy valiente de tu parte hablar sobre esto. El primer paso para el bienestar emocional es reconocer nuestros sentimientos. ¿Cómo crees que podrías cuidar mejor de ti mismo/a hoy?",
-      "Escucho tu preocupación y quiero que sepas que no estás solo/a. A veces hablar sobre nuestros pensamientos y sentimientos puede ayudar a aclararlos. ¿Qué te ayuda normalmente cuando te sientes así?",
-      "Aprecio tu honestidad al compartir esto. Es normal pasar por momentos difíciles. ¿Has notado algún patrón en lo que sientes, o hay algo que desencadena estas emociones?",
-      "Me alegra que hayas decidido hablar sobre esto. Cuidar nuestra salud mental es tan importante como cuidar nuestra salud física. ¿Hay alguna actividad que te haga sentir más tranquilo/a?",
-    ];
-
-    // Add some delay to simulate thinking
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
-    
-    return responses[Math.floor(Math.random() * responses.length)];
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -69,8 +52,8 @@ export function ChatBot() {
     setMessages(prev => [...prev, userMsg]);
 
     try {
-      // Generate bot response
-      const response = await generateResponse(userMessage);
+      // Generate bot response using LLM
+      const response = await generateMentalHealthResponse(userMessage);
       
       const botMsg: Message = {
         id: `bot-${Date.now()}`,
@@ -82,7 +65,7 @@ export function ChatBot() {
     } catch (error) {
       toast({
         title: "Error",
-        description: "No pude procesar tu mensaje. Por favor, intenta de nuevo.",
+        description: "Hubo un problema al procesar tu mensaje. Por favor, intenta de nuevo en unos momentos.",
         variant: "destructive"
       });
     } finally {
