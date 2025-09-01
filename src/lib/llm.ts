@@ -1,3 +1,5 @@
+import { detectEmotionalContext, getCategorySpecificPrompt } from "./mentalHealthKeywords";
+
 interface LLMResponse {
   generated_text: string;
 }
@@ -215,5 +217,4 @@ function getContextualFallbackResponse(userMessage: string, emotionalContext: st
   
   // Default response
   return fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)];
-import { detectEmotionalContext, getCategorySpecificPrompt } from "./mentalHealthKeywords";
 }
